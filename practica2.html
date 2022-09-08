@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Práctica 2 Programación Web</title>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" type="text/css" href="css/estilo01.css"/>
+    </head>
+<body>
+    <h1>Resumén de lección 1 de HTML5 de MSDN</h1>
+<br><h2>¿Qué es HTML?</h2>
+
+<p>HTML es un lenguaje de marcas de hípertexto, es el componente más básico de la web. Es quien define el significado y la estrcutura
+    del contenido web.</p>
+    <p>Con este lenguaje se define el contenido de las páginas web. No es un lenguaje de programación, ya que no cuenta con funciones
+        aritméticas, variables o estructuras de control propios de estos lenguajes, por lo que el HTML solo sirve para crear páginas web 
+        estáticas. HTML5 es una combinación de nuevas etiquetas de markup (lenguaje) HTML, propiedades CSS3, JavaScript y algunas 
+        tecnologías complementarias de apoyo, pero que técnicamente son independientes de la propia especificación HTML5.</p>
+
+        <h2>La Historia De HTML5</h2>
+
+        <p>HTML4, que se dio por cerrado en 1998, es el lenguaje de markup que conforma la base de la gran mayoría de las páginas web que 
+            podemos ver a día de hoy. Los diseñadores y desarrolladores web han estado utilizando la especificación HTML 4.01 durante bastantes 
+            años de manera satisfactoria, combinándola con CSS para la definición de estilos y con JavaScript para añadir interactividad a los 
+            contenidos.</p>
+            <p>En 2004, un grupo de representantes de los principales fabricantes de navegadores y un grupo de trabajo de desarrolladores 
+                web formaron un grupo independiente llamado WHATWG (iniciales de Web Hypertext Application Technology Working Group). 
+                Su misión consistía en crear una especificación de lenguaje HTML mejor, orientada a crear un nuevo tipo de aplicaciones web 
+                pero manteniendo la compatibilidad con las versiones en activo de los navegadores existentes.</p>
+        <p>Durante unos dos años y medio el W3C y el grupo WHATWG trabajaron en paralelo y de manera independiente hasta que en 2006, Tim 
+            Berners-Lee, creador de la World Wide Web y fundador del W3C anunció que el W3C y WHATWG trabajarían juntos en la elaboración del 
+            estándar.</p>
+
+           <p>Como resultado de todo ello, se abandonó el desarrollo de XHTML 2.0 y la especificación HTML 4.0 se reformó con el nombre HTML5. 
+            No obstante, conviene recordar que HTML5 empezó siendo Web Applications 1.0, y eso nos da una pista muy clara para entender 
+            para qué fue diseñado realmente HTML5.</p>
+
+    <h2>HTML5 extiende la definición de lo que puede hacer una página web</h2>
+
+    <p>HTML realmente no tiene forma de reproducir contenidos multimedia a 
+    dia de hoy, como lo es archivos de audio, archivos de vídeo sin un complemento 
+    plug-in como los Adobe Flash. HTML tampoco tiene capacidad para almacenar datos en el ordenador del usuario, esto se hace actualmente mediante un lenguaje de 
+    scripting o con alguna otra tecnología. No existe un formato de dibujo nativo en HTML. Los gráficos y animaciones se ofrecen en estos momentos en forma de 
+    archivos de imágenes o con la ayuda de otros complementos (Adobe Flash, Java, Microsoft Silverlight u otros). En general, cada vez más gente depende 
+    de la web y utiliza aplicaciones web y las expectativas que se generan alrededor de lo que puede (o podría) hacer una página web van creciendo día tras día.
+    </p>
+
+    <h2>El Lenguaje HTML5</h2>
+
+    <p>El lenguaje (o "markup") HTML5 incorpora algunas etiquetas nuevas pensadas para hacer que la estructura de la página web sea más lógica y funcional. 
+        Antes de HTML5, la estructura de una página dependía fuertemente de las etiquetas "(div)", generalmente asociadas a una clase CSS o un ID.</p>
+
+        <h2>El elemento (canvas) para dibujo y animación</h2>
+    
+        <p>El elemento canvas funciona a modo de superficie de dibujo dentro de una página web (de ahí le viene el nombre). 
+        Dentro de esta superficie de dibujo podemos crear formas con colores, gradientes y patrones de relleno. Podemos manipular los pixels de forma 
+        interactiva en pantalla, mostrar textos y exportar los contenidos hacia archivos de imagen estática, como .PNG. Podemos también utilizar JavaScript o 
+        las nuevas funciones de animación de CSS3 para que los objetos que creamos puedan moverse, desaparecer, cambiar de tamaño, etc.</p>
+    
+    <h2>Formularios web</h2>
+
+    <p>Los nuevos elementos de formulario de HTML, cuando se implementen, harán que el trabajo con formularios sea más sencillo que ahora. Por ejemplo, 
+    muchos diseñadores web necesitan crear formularios en donde los datos tienen que comprobarse antes de enviarlos al servidor. Es casi obligado que el usuario, 
+    por ejemplo, tenga que escribir una dirección de correo electrónico en un campo de un formulario. A día de hoy, para validar este dato se necesita programación 
+    en  Javascript o cualquier otro lenguaje de scripting, pero HTML5 incorpora el atributo required a la lista de tipos de datos de entrada utilizables en formularios, 
+    como se muestra en este ejemplo:</p>
+    <p>(input type="email" required)</p>
+
+    <h2>La API de Geolocalización en acción</h2>
+    <p>Geolocation es una API que nos permite conocer el punto geográfico desde el cual se conecta el navegador a Internet. 
+    Esta información se emplea para enviar al usuario datos de interés para él, ajustados a su ubicación. Como ejemplo de su utilidad están las páginas web de 
+    búsqueda asociadas a un mapa en el cual nos indican dónde están situados ciertos comercios o restaurantes a una distancia concreta a pie desde el punto donde 
+    estamos en ese momento. En vez de tener que introducir a mano la dirección, un navegador habilitado para geolocalización nos puede devolver estos resultados de 
+    manera automática y transparente.</p>
+
+    <h2>Web Workers</h2>
+
+    <p>Web Workers es otra API que se suele considerar de la familia HTML5. Web Workers es un marco de programación que resuelve problemas de rendimiento de los 
+        navegadores. Al acceder a aplicaciones web avanzadas, como las de mapas o aquellas que generan gráficos o diagramas al entrar en la página web, se inician 
+        ciertas operaciones de computación que consumen una gran cantidad de recursos de procesador y que pueden reducir notablemente el rendimiento de la aplicación. 
+        Gran parte de la ralentización es debida a que se produce un conflicto a nivel de máquina entre las tareas interactivas de usuario (pulsación del ratón, 
+        arrastre, etc.) y la necesidad de la propia aplicación de acceder a recursos como datos, tarjeta gráfica u otros.</p>
+
+    <h2>Almacenamiento Web</h2>
+
+    <p>El Almacenamiento Web (Web Storage) es un ejemplo de uso de modelos preexistentes de tecnologías web bajo nuevas modalidades, más potentes. El Web Storage 
+        mejora el concepto de cookies del navegador. Actualmente las cookies permiten que los sitios web puedan guardar información en cantidades muy reducidas en 
+        los equipos de los usuarios, datos que normalmente sirven para volver a utilizarlos en momentos posteriores, y de esta manera, por ejemplo, ciertos sitios web 
+        recuerdan la información del usuario desde el último acceso.
+Las cookies son una tecnología bastante limitada y no resulta fácil su utilización por parte de los diseñadores web. Ahora, Web Storage actualiza este modelo para 
+que las aplicaciones web puedan almacenar una cantidad de datos muy superior y que su acceso y utilización sea mucho más fácil y eficiente.
+HTML5 nos ofrece dos maneras de guardar datos: localStorage y sessionStorage. Los datos guardados con localStorage quedan a disposición del navegador en todo 
+momento, aunque cerremos el programa o se reinicie el sistema. Los datos guardados bajo la modalidad  sessionStorage se pierden al cerrar el navegador.</p>
+
+<h2>Animaciones con CSS</h2>
+
+<p>Ciertas tecnologías como Flash o Silverlight se han venido utilizando hasta ahora para animar objetos dentro de las páginas web. 
+    Ahora ya podemos conseguir algunos de estos efectos utilizando las reglas y propiedades de CSS3. En el futuro, el elemento Canvas de HTML5 y las 
+    transiciones de CSS3 permitirán crear elementos animados e interactivos sobre la página. Las animaciones de CSS, y el tema siguiente, las transiciones, 
+    probablemente estarán soportadas por la mayoría de los navegadores en los próximos años.</p>
+
+<h2>HTML5 está en un momento de transición</h2>
+
+<p>Las tecnologías que hay detrás de HTML5 están en fase de transición, por lo que es necesario tener claro cuándo debemos utilizarlas y cuándo no. 
+    A lo largo de este libro te iremos orientando y ofreciendo una perspectiva lo más amplia posible al respecto del tipo de compatibilidad que puedes 
+    esperar en distintos navegadores y también ofreceremos ejemplos de uso donde el uso de HTML5 puede ser más indicado que otros lenguajes.</p>
+
+    <p>Todos los navegadores de mayor difusión hoy en día (Microsoft Internet Explorer, Mozilla Firefox, Apple Safari, Google Chrome y Opera) ofrecen soporte, 
+        en grado variable, para las funcionalidades de HTML5 en cuanto a su sintaxis y tecnologías relacionadas. En algunos casos una página que ofrece alguna 
+        funcionalidad nueva o un aspecto especial en un navegador puede que no se consiga ver en absoluto en otro, o que algunas características no estén presentes 
+        aunque la página siga siendo funcional. Estos escenarios sin duda van a cambiar en el futuro, pero el mundo de los navegadores web en equipos de sobremesa 
+        evoluciona muy lentamente, por lo que seguiremos observando en el futuro próximo este tipo de situaciones y diferencias.</p>
+
+<h2>¿Quién utiliza HTML5 el día de hoy?</h2>
+<p>Es una pregunta difícil de responder porque, como has podido ver, no existe una definición única para "HTML5". 
+    Existen numerosas demos de HTML5 que no se podrían poner en entornos en producción debido al distinto grado de soporte que ofrecen los navegadores. 
+    Si decides incorporar funciones de estilo de CSS3, hay muchos sitios web personales y de empresas que utilizan los elementos más vistosos, como border-radius o 
+    las funciones de transformación. En estos casos, los diseñadores pueden utilizar las funcionalidades y añadir alternativas adicionales para asegurarse de que la 
+    restitución de estas páginas en navegadores no compatibles no es demasiado diferente de cómo se ven en los navegadores más modernos.</p>
+
+    <p>Un área donde el uso de las funcionalidades de HTML5 está siendo muy activo es entre los dispositivos móviles y smartphones. 
+        En este mundo podemos encontrar aplicaciones web que aprovechan las ventajas de los nuevos tags de Video o Audio, puesto que ciertos dispositivos 
+        como Windows Phone o iPhone soportan HTML5 pero no soportan complementos como Flash o Silverlight.</p>
+
+<h2>Etiquetas de HTML5 según w3schools</h2>
+<p>(!DOCTYPE html): Indica al navegador que el documento está basado en el estándar HTML5</p>
+<p>(html, /html): Representa la raíz de un documento HTML. Todos los demás elementos de la estructura HTML deben ser recogidos 
+    dentro de estas etiquetas.</p>
+<p>(head,/head): Representa una colección de metadatos acerca del documento, 
+    incluyendo enlaces a, o definiciones de, scripts y hojas de estilo. El resto de etiquetas de metadatos, 
+    irán recogidas dentro de las etiquetas de apertura y cierre del head. Importante explicar que estos metadatos del documento, 
+    es información para el navegador y no contenido que será visible en la página web.</p>
+    <p>(title,/title): Etiqueta usada para definir el título de la página web.</p>
+    <p>(link): Se usa para enlazar recursos externos al documento HTML. El ejemplo más común son las hojas de estilos CSS.</p>
+    <p>(meta): Etiqueta usada para definir otros metadatos que no se pueden definir con una etiqueta HTML especifica. 
+        Por ejemplo para definir el autor del sitio, o la descripción del mismo.</p>
+    <p>(style): Etiquetas usadas para introducir código CSS en línea, es decir, en el propio documento HTML.</p>
+<br/><br/><hr/><br/><br/>
+
+<h1>Conclusiones personales: </h1>
+
+
+<br><h3>AARÓN ENRIQUE CASTILLO ROJAS:</h3> <p>En esta práctica se busco información sobre diferentes definiciones sobre conceptos de 
+programación como las direcciones IP que hay 2 tipos en este caso IP pública y IP privada, tambien lo que es un firewall
+que sirve monitorear el tráfico de la red también es un dispositivo de seguridad y entre otras, y todas se juntaron en un archivo html 
+para poder tener una mejor manera de verlas todas juntas en una página web que se nos dio como tarea
+para esta práctica.</p>
+
+<h3>ROBERTO CARLOS CANIZALES JUAREZ: </h3><p>Por lo visto en esta practica, apresianos lo que es el lenguaje HTML;este lenguaje se utiliza 
+    principalmente para la elaboracion de paginas web. El HTML tiene varias sintaxis tal como el HTML5,HTML4 y XHTML. Identificamos algunos 
+    elementos y caracteristicas que dan funcionalidad al HTML.</p>
+
+<h3>NAOMI ALEJANDRA CRUZ HERNANDEZ: </h3><p>En esta práctica aprendí que el lenguaje html  es muy base y sencillo en la elaboración de páginas web, 
+    ya que, tiene muchas facilidades para la gente que apenas empieza en la programación web, también tiene buena seguridad.</p>
+
+<h3>MACARIO GARZA MARIN: </h3><p>El lenguaje de HTML es un lenguaje muy practico para la elaboracion de paginas web, ya que sus etiquetas son 
+faciles de utilizar y tambier para enlasar bases de datos mediante php, tambien los estilos que pueden ser agregados mediante css son muy utiles 
+para darle una mejor presentación a nuestro sitio web.</p>
+
+<h3>ALFREDO GAEL DELGADO MUÑOZ: </h3><p>Concluyendo la actividad, me doy cuenta de la importancia que ha tenido con el tiempo el lenguaje HTML, 
+y de todas las funciones que se pueden manejar con este, aunque aún no se alcanza la versión definitiva de esté, sigue de todas maneras 
+teniendo su espacio como la forma básica para construir y estructurar páginas web, al igual de la relación y la forma con la que se puede 
+combinar con CSS creo que todo tiene mucho peso en el desarrollo de páginas web, me gusta mucho ver como va evolucionando y como en su Historia
+un simple hecho diferente pudo haber cambiado como lo utilizamos o como es su estructura o con que objetivo fue creado.
+</p>
+</body>
+</html>
+
