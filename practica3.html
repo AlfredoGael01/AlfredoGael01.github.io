@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Práctica 3 Programación Web</title>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" type="text/css" href="css.css"/>
+        
+    </head>
+
+    <style>
+        h1{
+            color: white;
+            text-align: center;
+            font-size: 50px;
+        }
+
+        h2{
+            color: white;
+            text-align: center;
+            font-size: 25px;
+        }
+
+        p{
+            color: white;
+            font-size: 20px;
+        }
+
+        h3{
+            color: white;
+            font-size: 25px;
+        }
+
+        footer{
+            background-color:white;
+            size: 40px;
+            text-align: center;
+        }
+    </style>
+        
+    
+
+
+<body style="background-color: rgb(128, 128, 128)">
+    <h1 >Resumén de lección 3 de HTML5 de MSDN</h1>
+
+<h2>El papel del archivo de reset CSS</h2>
+<p>Los elementos HTML siempre se muestran en pantalla usando estilos por defecto que aplica cada navegador. 
+Css permite, como ya sabemos definir tipos de letra, el tamaño y su fuente, sin embargo, hay otros estilos no tan obvios, 
+como son: el estilo por defecto para un elemento heading (h1) que incluye unos márgenes de 10 px por encima y por debajo del texto. 
+En caso de querer modificar el estilo de h1 para que no tenga márgenes, tendremos que indicar algunas reglas que conviertan los 
+valores a cero.</p>
+<p>Todos los elementos e HTML incluyen márgenes por defecto. Sin embargo, aunque los navegadores web actuales son muy superiores, 
+    es conveniente saber que cada motor de restitución empleado por navegador aplica sus propias reglas para mostrar elementos en 
+    pantalla.
+    Se puede decir que el margen por defecto de 10px por navegador puede transformarse en 15 pixeles en otro navegador.
+    Debido a estas variaciones se generan resultados no homogéneos a la hora de ver páginas web.
+    Una técnica para homogeneizar las presentaciones en pantalla consiste en utilizar un archivo CSS de reset que elimine 
+    los estilos por defecto aplicados a los elementos HTML utilizados con más frecuencia. Con este reinicio de valores podemos 
+    conseguir una base fiable y coherente sobre la cual construir nuestros nuevos estilos.
+    </p>
+
+<h2>Breve historia de las técnicas de presentación en pantalla para la web.</h2>
+<p>Cuando se comenzó con el diseño web a mediados de loa años 90, se utilizaba un único método para crear estructuras visuales 
+    complejas, por ejemplo la presentación en varias columnas, que consistía en usar el elemento table. La tabla HTML estaba 
+    pensada inicialmente para mostrar datos de manera estructurada, en filas, columnas y celdas. Sin embargo, los diseñadores 
+    empezaron a utilizar este elemento como base para las estructuras visuales de las páginas.
+    En aquellos tiempos era un recurso muy confiable.
+     Después, a partir de esto se comenzaron a usar técnicas como el anidamiento de tablas, es decir, crear tablas dentro de celdas 
+     de otras tablas de mayor tamaño.</p>
+    <p>Puesto que la primera fila se iba a convertir en la sección de cabedera, no interesaría que quedase dividida en dos columnas. 
+    La etiqueta HTML colspa> permite fusionar las dos celdas.
+    En esta primera fila el diseñador, por ejemplo, podía intentar insertar una sección independiente de tres columnas, para mostrar 
+    un logo y otros elementos, como una barra de navegación o un campo para pedir credenciales de usuario. 
+    Para generar esta estructura de tabla, el diseñador tenía que configurar la tabla inicial con una anchura y altura fijas. 
+    Supongamos que el diseñador también quisiera un borde negro fino para todos los elementos. La propiedad “border” de las tablas 
+    HTML es muy básica no nos permite añadir colores. Una solución frecuente consistía en insertar la tabla actual dentro de otra, 
+    que consistía simplemente en una única celda con el fondo en color negro. Al modificar el margen interior y el color de fondo, y 
+    fusionar otras celdas más, el diseñador podía así crear una estructura visual basada en tablas con un cierto estilo.
+    Gracias al CSS se a sustituido el empleo de tablas al momento de organizar las páginas.
+    </p>
+
+<h2 >Introducción a las distintas opciones de presentación de páginas</h2>
+
+<p>Antes de la estructura visual de nuestras páginas web tenemos que decidir unas cuantas cosas. Lo primero es qué 
+    anchura va a tener. Hay dos categorías principales de estructuras en base a su anchura: las de anchura fija y las de ancho 
+    variable. En las estructuras de ancho fijo todos los elementos de la página se anidan dentro de un contenedor que tiene un ancho 
+    explícito (en este ejemplo utilizamos el valor de 960 pixels, pero se suele utilizar también la unidad de medida em). Por otro 
+    lado las estructuras de ancho variable son más difíciles de diseñar y obligan al creador a resolver una serie de asuntos 
+    adicionales.</p>
+
+    <h2>La propiedad float de CSS</h2>
+    <p>La propiedad float en CSS hace posible que un texto pueda escribirse alrededor de una imagen. Este estilo ha sido tomado del 
+    diseño de imprenta, donde a este efecto se le llama “justificación” del texto. CSS consigue el mismo efecto haciendo que los 
+    elementos que siguen a un elemento “flotante” puedan rodearlo, cambiando su posición relativa con respecto a él. 
+    Este comportamiento también nos sirve para crear columnas en una página.</p>
+
+    <h2>El elemento "div": creación de una estructura CSS de dos columnas con anchura fija</h2>
+    <p>1 En el editor de textos, desde el menú Archivo- Abrir, ve a la carpeta HTML5_03lessons y selecciona el archivo 03_layoutstart.html y pulsa Abrir
+
+        <p>2 Guarda el archivo en el disco con el nombre 03_layoutwork.html. Así conservarás el archivo original como copia de seguridad. Esta página contiene una serie de elementos HTML div con algún contenido que queremos mostrar en pantalla en ciertas posiciones. Analiza el código de la página para tratar de entender cómo se ha creado. Hemos incorporado algunos comentarios que te orientarán.
+        
+        La estructura de la página te la entregamos prediseñada. A lo largo de esta práctica vamos a ver en detalle cómo funciona. El primer paso consiste en saber cuál es la función de la etiqueta div y el papel tan importante que representa en la organización visual de las páginas con CSS.</p>
+        
+        <p>3 En el editor, encuentra la línea div id="wrap". Es el comienzo de una sección de la página en donde se anidan el resto de elementos. Por sí sola, una etiqueta div no hace nada, que es algo que diferencia a esta etiqueta de las otras, ya que los demás elementos HTML, como los párrafos (p) o las listas (ul, li, dl), ejercen diversos efectos sobre sus contenidos.
+        
+        La etiqueta div así como los párrafos y listas, entre otros, son elementos de bloque. Los elementos de bloque generalmente se insertan en las páginas en la línea siguiente al elemento previo. La etiqueta div suele asociarse bien con una clase CSS o con un ID, y con ello ya podemos aplicarles reglas individualizadas para controlar su aspecto. Antes de hacer esto vamos a echar un vistazo a la página tal y como se ve en el original.</p>
+        
+        <p>4  Abre la página en el navegador. El archivo
+        reset.css con el que hemos estado trabajando antes es el que hace que todos los elementos de la página aparezcan pegados unos a otros.
+        
+        
+        Esta página incluye una serie de secciones div y los estilos aplicables a los elementos HTML se han reseteado.
+        
+        Para ver cómo responden las etiquetas div vamos a aplicar estilo al elemento con el ID “wrap” de forma que tenga ancho fijo. Cierra el navegador y vuelve al editor de texto.</p>
+        
+       <p>5  Encuentra la etiqueta style que hemos añadido al documento. Inserta una regla de estilo para el ID llamado “wrap”. El siguiente código (destacado en rojo) es lo que tienes que escribir:
+        
+        <p>(style type="text/css")</p>
+       <p> #wrap {</p>
+        <p>background-color:#E0B3B9;</p>
+         <p>}</p>
+        <p>style</p>
+        <p>Guarda el archivo y vuelve a abrir la página en el navegador. El div wrap incluye dentro a todos los demás elementos de la página, como se puede ver ahora que le hemos puesto un fondo de color morado. En este momento el div se extiende para cubrir toda la anchura de la pantalla. Es una presentación muy básica, que sigue el modelo de ancho variable. Si cambias el tamaño de la ventana, verás que el texto se reorganiza. Ahora vamos a declarar una anchura fija para el div wrap.</p>
+        
+        <p>6 En el editor de texto añade estas dos líneas de código (destacadas en rojo) a tu estilo #wrap:</p>
+        
+        <p>#wrap {</p>
+        <p>background-color:#E0B3B9;</p>
+        <p> width:960px;</p> 
+        <p> border:thin solid black;</p> 
+        <p>}</p>
+        <p>la página y vuelve a visualizarla en el navegador. Ahora el div wrap ocupa 960 pixels de la página.</p> 
+        
+        
+        
+       <p> El div wrap ahora tiene una anchura de 960 pixels y un borde fino de color negro alrededor.</p>
+        
+       <p>También hemos cambiado el borde, para mostrar mejor los límites del div wrap. Resize your browser window again. The text no longer reflows, and if your browser window is narrower than 960 pixels, your content is cropped. When the browser window is wider than 960 pixels, the box defined by the wrap div is aligned to the left. There is a simple way to position this div so it will always be centered in the browser window.</p>
+        
+        
+        <p>7 Vuelve al editor y añade esta línea de código marcada en rojo:</p>
+        
+        <p>#wrap {</p>
+        <p>back…</p>
+
+
+
+<h2>Añadir estilos para el texto</h2>
+<p>Hasta aquí hemos añadido los estilos dentro de una hoja de estilos interna en vez de hacerlo sobre una externa. 
+    Cuando estamos diseñando la estructura de las páginas, el empleo de hojas de estilo internas es una cuestión de comodidad: 
+    resulta más sencillo para crear y modificar reglas si las tenemos dentro de la página y podemos llegar a ellas desplazando la 
+    ventana que si las tenemos en un archivo externo. De momento vamos a asociar una hoja de estilos externa que añade reglas de 
+    base para elementos como títulos, listas y párrafos.</p>
+
+<h2>Efecto de los márgenes internos y externos en una estructura de anchura fija</h2>
+<p>El objetivo de esta práctica no consiste en mostrar un método único de organización con CSS, sino en conocer las diferentes opciones posibles, 
+    lo que te ayudará en futuros proyectos a la hora de decidir qué método es el más adecuado en cada caso.  Básicamente podemos separar el texto del borde 
+    izquierdo de dos manera: la primera consiste en utilizar el valor de margen interior o “padding” del contenedor y la segunda, utilizar el margen externo 
+    de los objetos contenidos. Vamos a ver ahora los pros y contras de ambas técnicas
+    En el repaso se explicara mas a fondo los efectos  de los márgenes internos y externos.
+    </p>
+
+<h2>Repaso al uso de márgenes internos y externos</h2>
+<p>En esta lección hemos visto dos métodos para separar los elementos dentro de una página. 
+    El primero consiste en añadir margen interno (padding) al elemento div contenedor. En este caso la ventaja es que todos 
+    los elementos dentro de este div se ven afectados al mismo tiempo, es una solución rápida y eficiente. Su desventaja es 
+    que aumenta la anchura total del propio contenedor. Para compensar esta expansión, tenemos que dejar algo de espacio adicional a 
+    los lados. Este comportamiento puede generar cierta confusión y provocar que las páginas se restituyan incorrectamente si no 
+    tenemos cuidado.</p>
+    <p>conviene destacar que lo habitual es aplicar una combinación de ambos métodos en cualquier estructura de presentación; Por ende, 
+        debes conocer bien el comportamiento y los efectos de cada uno de ellos.</p>
+
+    <p>El segundo método consiste en añadir márgenes externos a los elementos que están dentro del propio div. 
+    Su desventaja es que necesitamos más código y hay que prestar atención a los detalles, tenemos que ir viendo cómo se 
+    posicionan los elementos individualmente. Su ventaja es que el posicionamiento de la columna es más predecible, puesto que 
+    solo tenemos que tener en cuenta una anchura total.</p>
+
+<h2>Aplicar una imagen de fondo al pie de página</h2>
+<p>2 - Guarda la página y ábrela en el navegador. A cada uno de los párrafos se le aplican las reglas de párrafo descritas 
+    en la hoja de estilos. Ahora vamos a añadirle una imagen de fondo a todo el contenedor div. Es una imagen de 960 pixels de 
+    ancho y 128 de alto.</p>
+
+   <p> 3 - En la hoja de estilos interna, encuentra la regla para el pie de página (“#footer”). Añade una nueva regla 
+    para aplicar una imagen de fondo indicando un archivo de la carpeta de imágenes de tu equipo:</p>
+
+    <p>Guarda la página y vuelve a mostrarla en el navegador.<p>
+
+        <p>El pie de página tiene ahora una imagen de fondo por aplicación de una nueva regla CSS.</p>
+        
+        <p>La imagen de fondo ahora aparece detrás de los textos. Fíjate en la propiedad background-repeat del código anterior. 
+        CSS, por defecto, considera a las imágenes de fondo como “baldosas” que se van añadiendo sin límite hasta llenar todo 
+        el espacio del objeto al que pertenecen.  Al indicar el valor no-repeat nos aseguramos que la imagen solo se muestra una vez.
+         Las dimensiones del pie de página deben ser tales que nos permitan ver la imagen correctamente, tal y como veremos 
+         en el paso siguiente.</p>
+        
+        <p>4 - Modifica la regla para el pie de página añadiendo las líneas en rojo.</p>
+
+<h2>Ajuste fino de la estructura visual</h2>
+<p>Podemos aplicar colores de fondo y/o bordes a los elementos principales de nuestra estructura en las primeras 
+fases del diseño, lo que nos ayudará a ver mejor sus límites. Después, si no queremos conservarlos, podemos eliminarlos y la 
+estructura seguirá funcionando sin problemas.</p>
+<h2> ¿Qué hace la propiedad  float de CSS y cuándo conviene utilizarla?</h2>
+<p> La propiedad CSS float permite eliminar cualquier elemento dentro del flujo HTML por defecto y moverlo (o “hacerlo flotar”) 
+pegándolo a la derecha o a la izquierda del contenedor donde está situado. Podemos utilizar la propiedad float cuando queremos 
+que el texto se organice alrededor de imágenes, para crear menús de navegación horizontales o utilizar 
+diseños de página en columnas.</p>
+
+
+
+
+<br/><br/><hr/><br/><br/>
+
+<h1 >Preguntas:</h1>
+<br>
+<h3>1. ¿Qué es un CSS?</h3>
+<p>CSS son las hojas de estilo en cascada, significa cascading style sheets, permiten darle formato 
+a las páginas web y hacerlas atractivas para el usuario. Es una de las herramientas prinicipales para el diseño de 
+páginas web y va de la mano con HTML y con JavaScript. 
+</p>
+<h3>2. ¿Para qué sirve un CSS?</h3>
+<p>Es un lenguaje fundamental en el desarrollo de páginas web, utilizado para ordenar instrucciones y darle
+formato a las páginas. Las instrucciones se forman en referencia a la apariencia del sitio y mostrarlo de una
+manera atractiva para el ojo del usurio que la navega. Es decir, HTML es quien se encarga de la estructura de la página
+mientras que el CSS es más para la presentación de esta. 
+</p>
+<h3>3. ¿Cual es la diferencia que seria mas difícil de realizar en un sitio web si se optara por no usar un CSS?</h3>
+<p>Definitivamente sería más difícil sin CSS, puesto que este lenguaje brinda muchas más herramientas de diseño 
+    al HTML, que a pesar de contar con etiquetas del mismo objetivo, algunas suelen estar obsoletas y no son tan
+    prácticas como las que ofrece el lenguaje CSS, además, con el CSS se puede llevar una mejor organización puesto que
+    es uno mismo quien diseña las reglas de formato en él, e incluso puede trabajarse desde un archivo completamente 
+    aparte. 
+</p>
+
+<br/><br/><hr/><br/><br/>
+<h1 >Conclusiones: </h1>
+
+<h3>AARÓN ENRIQUE CASTILLO ROJAS:</h3>
+<p>En esta práctica se nos dio la tarea de hacer un resumen sobre algunos puntos de importancia 
+de la programación como para que sirve el div y también algo llamado float que hace que un texto se escriba alrededor 
+de una imagen, y esto nos sirve para comprender y a analizar algunos conceptos sobre la programación.</p>
+
+<h3>ROBERTO CARLOS CANIZALES JUAREZ:</h3>
+<p>En cuanto a los márgenes, se aprendió que se pueden usar 2 métodos, los márgenes internos y externos. 
+    Al usar un método tenemos su ventaja y al mismo tiempo su desventaja, esto para los 2 casos o métodos de margen; pero si 
+    los sabes usar bien puede que encuentres un equilibrio entre los 2, me refiero a combinar los métodos</p>
+
+<h3>NAOMI ALEJANDRA CRUZ HERNANDEZ: </h3>
+<p>Después de realizar la practica entendí que el CSS es una herramienta demasiad importante 
+    para la creación de paginas web, ya que, sin este los métodos para darles un diseño eran mayormente complicados.
+    Literalmente es un facilitador en la creación y diseño de paginas web. 
+    </p>
+
+<h3>MACARIO GARZA MARIN:</h3>
+<p>En esta practica utilizamos los diferentes tipos de estios de texto, colores, alineacion entre otros muchos estilos
+    tambien los colores del fondo y del pie de pagina, agregar imagenes entre mas cosas que se pueden utilizar
+    para dar mejor precentacion en nuestra pagina
+</p>
+
+<h3>ALFREDO GAEL DELGADO MUÑOZ:</h3>
+<p>Con está práctica me queda clara la importancia del CSS y de como este puede ser aplicado en las páginas web, tambien me gustó
+    ver como es que una página con los comandos adecuados de CSS puede cambiar y verse mucho más presentable. La importancia 
+    que tienen las herramientas que sobrepasan las etiquetas obsoletas de HTML es bastante pues es la forma en que funcionan los 
+    comandos de CSS.
+</p>
+
+<footer>
+    <img src="icone-html-bleue.JPEG.jpeg" width="110px">
+</footer>
+
+
+</html>
