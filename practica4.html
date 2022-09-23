@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Práctica 4 Programación Web</title>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" type="text/css" href="css.css"/>
+        <style>
+            h1{
+                color: white;
+                text-align: center;
+                font-size: 50px;
+                font-family:'Times New Roman', Times, serif;
+            }
+    
+            h2{
+                color: white;
+                text-align: center;
+                font-size: 35px;
+            }
+    
+            p{
+                color: white;
+                font-size: 20px;
+            }
+    
+            h3{
+                color: white;
+                font-size: 25px;
+            }
+    
+            footer{
+                background-color:white;
+                size: 40px;
+                text-align: center;
+            }
+        </style>
+        <body style="background-color: rgb(241, 191, 105)">
+        <h1>Resumen de conceptos básicos de HTML, XHTML y CSS</h1>
+
+        <h2>Lenguajes Web</h2>
+
+        <p>tema es enormemente extenso y muchos de los principios básicos que se explican aquí te enseñarán a crear sitios web de 
+            calidad con los medios disponibles en este momento, 
+            al tiempo que te preparan para el futuro, al avanzar las nuevas funcionalidades de HTML5.</p>
+
+        <h2>La estructura de la página web se basa en HTML</h2>
+
+        <p>Los documentos HTML (iniciales de Hypertext Markup Language) utilizan la extensión .htm o .html. Esta extensión avisa al 
+            navegador web o a un dispositivo como un teléfono móvil, que en este archivo hay contenido HTML y dicho contenido se restituye en 
+            la ventana del navegador o la pantalla del dispositivo siguiendo las reglas del lenguaje HTML.</p>
+
+            <p>Las etiquetas se utilizan para definir el contenido de una página HTML. Estas etiquetas quedan 
+                enmarcadas dentro de los símbolos "menor que" (<) y "mayor que" (>) y se ponen al principio y al final de un 
+                objeto o texto utilizado en la página HTML. </p>
+
+            <h2>Detalles de la sintaxis de XHTML</h2>
+
+            <p>HTML es un lenguaje de marcas. Como tal, debemos conocer las diferentes etiquetas y elementos que utiliza. Las etiquetas por lo general 
+                vienen emparejadas. Una etiqueta de apertura significará que el navegador debe tratar el nuevo texto utilizando las propiedades de esa etiqueta y 
+                una etiqueta de cierre indica donde terminan esas propiedades.
+                Un elemento HTML tiene la siguiente sintaxis:</p>
+               <p> •	Un elemento HTML comienza con una etiqueta de apertura o inicial, por ejemplo, h1.</p>
+                <p> •	Un elemento HTML termina con una etiqueta de cierre o final, por ejemplo, h1.</p>
+                    <p> •	El contenido de un elemento HTML está encerrado dentro de las etiquetas de inicio y final, por ejemplo, h1 Este es 
+                        el contenido del elemento. /h1.</p>
+                        <p>  •	También puede contener atributos
+                
+                <p>Algunos elementos HTML no tienen contenido y se llaman “elementos vacíos”. Estos elementos, generalmente, sólo tienen etiqueta de inicio o de fin, pero no ambas, por ejemplo, br />
+                </p>
+            
+            <h2>DOCTYPE indica al navegador que debe esperar</h2>
+
+            <p>Cualquiera que trabaje con documentos HTML ya conoce la etiqueta !DOCTYPE html. Aunque no es una de las etiquetas HTML clásicas, DOCTYPE html 
+                debe aparecer al principio de los documentos HTML, incluso antes del propio código fuente. DOCTYPE indica qué tipo de documento debe abrir el 
+                navegador y qué sintaxis y gramática utiliza su código fuente. A menudo la etiqueta se olvida, aunque esta sea uno de los elementos más importantes 
+                de un documento HTML. ¡Dado que hoy en día su presencia se da por hecho, no debemos olvidar de indicar el tipo de documento de cada página con 
+                !DOCTYPE html>. Los mejores editores de HTML ofrecen una comprobación de errores que nos indican las líneas DOCTYPE que faltan.</p>
+
+            <p>La tarea de DOCTYPE html es explicar a los programadores y navegadores, a primera vista, de qué Document Type Definition (DTD) se trata y cómo debe 
+            renderizarse la web. El DTD indica qué lenguaje de código se utiliza en la página o en el documento HTML. Esto se aplica, por ejemplo, a los archivos HTML,
+            XHTML, SVG, MathML o XML. Cualquiera que aprenda HTML y quiera crear un sitio web debería por tanto insertar !DOCTYPE HTML al principio.</p>
+
+            <h2>El W3C y la validación de la página</h2>
+
+            <p>Significa "Consorcio de la World Wide Web". El W3C es una comunidad internacional que incluye un personal a tiempo completo, expertos de la 
+            industria y varias organizaciones miembros. Estos grupos trabajan juntos para desarrollar estándares para World Wide Web.</p>
+            <p>La misión de W3C es llevar a la Web a su máximo potencial mediante el desarrollo de protocolos y pautas. Esto se logra principalmente mediante la 
+            creación y publicación de estándares web. Al adoptar los estándares web creados por W3C, hardware fabricantes y programa. los desarrolladores pueden 
+            garantizar que sus equipos y programas funcionen con las últimas tecnologías web. Por ejemplo, la mayoría navegadores web incorporar varios estándares 
+            W3C, lo que les permite interpretar las últimas versiones de HTML y a la CO código. Cuando los navegadores se ajustan a los estándares W3C, también ayuda 
+            a que las páginas web se vean consistentes en diferentes navegadores.</p>
+
+            <h2>Estructura HTML</h2>
+            <p>Uno de los conceptos más importantes que debemos dominar a la hora de diseñar contenidos web es la estructura anidada de los documentos HTML. 
+            Los elementos suelen presentarse contenidos unos dentro de otros. Por lo general tenemos que empezar por diseñar la estructura HTML de la página para 
+            después continuar con los estilos, aplicando CSS.</p>
+            <p>El elemento body está anidado (incluido) dentro del elemento html. En términos de programación, body está colocado entre la etiqueta de apertura 
+            html y la de cierre /html, y por eso decimos que las etiquetas anidadas son las que se encuentran entre otras etiquetas de apertura y cierre. 
+            Ambos elementos, body y html, forman la estructura básica de toda página web. Cuando un navegador abre un documento HTML busca esta estructura.</p>
+            <p>En los documentos HTML parte del contenido se muestra en pantalla dentro de la ventana del navegador, pero hay otra parte del código que queda 
+            oculta, aunque es de gran utilidad para el navegador, para los motores de búsqueda y para el desarrollador. Algunos ejemplos de este código oculto 
+            son los scripts que sirven para añadir interactividad a la página, o también el código que ayuda a los buscadores a clasificar el documento, y 
+            los estilos que definen el aspecto de la página. Este código suele aparecer dentro del elemento head, el cual a su vez, está anidado dentro de las 
+            etiquetas html.</p>
+
+            <h2>Insertar imágenes de HTML</h2>
+            <p>1 Mueve el cursor hacia el primer párrafo y sitúalo inmediatamente después de la etiqueta de cierre </p>. 
+            <p>Pulsa Intro para pasar a la línea siguiente. Escribe img /.</p>
+
+           <p>La etiqueta de imagen es una categoría especial dentro de las etiquetas HTML, de las que admiten el autocierre. 
+            No necesitamos escribir por separado etiqueta de apertura y cierre: con una sola es suficiente, pero es importante que la escribamos bien. 
+            Hay un espacio de separación entre la palabra img y la barra /. Así se cumplen los requisitos de sintaxis de XHTML y el archivo de imagen que vamos a 
+            utilizar se indicará en el espacio que queda entre img y /.
+            
+            <p>2 Mueve el ratón a la derecha de la palabra img, inserta un espacio en blanco y escribe src="".
+            
+                <p>src es la abreviatura del atributo source (origen), y tenemos que indicar un valor para él, que es la dirección URL de la imagen que queremos 
+            mostrar dentro de la página.</p>
+            
+            <p>3 En el interior de las comillas de src= escribe images/familysitting.jpg.</p>
+            <p>4 Sitúa el cursor a la derecha de la comilla de cierre que sigue al nombre de archivo familysitting.jpg e inserta un espacio en blanco, y 
+            después escribe alt="".</p>
+
+<p>5 Dentro de las comillas del paso anterior, escribe Familia sentada en unos escalones.</p>
+
+<p>6 En el menú Archivo, selecciona Guardar y después abre el archivo en el navegador.</p>
+
+            <h2>El panel de CSS</h2>
+
+            <p>CSS (Cascading Style Sheets) utiliza un lenguaje distinto de HTML. CSS nos permite aplicar estilos de manera coherente a los distintos elementos 
+            de las páginas del sitio web, de modo que los títulos, listas y párrafos pueden verse igual en todas y cada una de las páginas.</p>
+
+            <h2>Definir un estilo para los títulos</h2>
+
+            <p>Para hacernos una idea de cómo funciona CSS vamos a crear una regla CSS sencilla que cambia el estilo de un título en la página. 
+            Puede que una de las mejores maneras de entender la acción de CSS sea ver cómo se aplica el estilo por defecto para este título al escribirlo en pantalla.</p>
+            <p>1 Dentro del navegador, analiza el texto de título. El estilo y las instrucciones de formato las aportan las "reglas" que el propio navegador 
+            aplica por diseño a los elementos h1 a la hora de presentarlos en pantalla. El tamaño, color y tipo de letra los resuelve el navegador ya que no 
+            dispone de otras instrucciones de formato. El navegador solo sabe que hay un elemento "heading 1" y lo muestra de la forma en que considera adecuado. 
+            Esto es lo que nos encontramos, por ejemplo, en Internet Explorer, Firefox y algunos otros navegadores. Ahora podemos modificar esta apariencia con una 
+            regla de CSS.</p>
+            <p>2 En la parte superior de la página busca la etiqueta title</p>
+            <p>3 Pulsa Intro tres veces y después escribe /style. En este momento tenemos un elemento de estilo sin contenido alguno, 
+            pero nos servirá para insertar ahí una regla con la que vamos a modificar el estilo del elemento h1.</p>
+            <p>El elemento style queda dentro de las etiquetas delimitadoras de la cabecera head de la página. 
+            En HTML todo lo que queda dentro de la sección head no se muestra en pantalla. Por ejemplo, también tenemos un elemento title en esta sección. 
+            Este título aparece en la parte superior de la ventana del navegador, pero no dentro de la página propiamente.</p>
+            <p>4 En la línea vacía que hay debajo de la etiqueta de apertura style;/style</p>
+            <p>5 Pulsa Intro y después el tabulador para poner el cursor debajo del signo de la llave en el editor, si es que el propio editor no te posiciona 
+            automáticamente en ese lugar. La tabulación es opcional, pero hace que el código CSS se lea mejor. Como veremos ahora, el número de líneas en esta 
+            regla va a aumentar y es muy conveniente que el código con facilidad.</p>
+            <p>6 La palabra color se denomina como una propiedad en la sintaxis CSS y la palabra red es el valor que le aplicamos a esa propiedad. 
+            Al par compuesto por una propiedad y un valor se le denomina declaración.</p>
+            <p>7 Pulsa Intro otra vez y en la línea siguiente escribe el signo } el signo de llave que cierra al signo { que hemos escrito en el paso 4.</p>
+            <p>8 Guarda el archivo en disco y visualiza la página en el navegador. La cabecera aparece ahora en color rojo y eso nos indica que 
+            hemos escrito bien la regla CSS. Cierra el navegador y vuelve al editor.
+                El título dentro de la etiqueta H1 tiene un nuevo color, por aplicación de una regla CSS.
+                </p>
+            <p>9 En el archivo HTML, selecciona la palabra red y cámbiala por este otro código, que representa un color de la gama de colores que pueden 
+                mostrarse en pantalla: #FF0000. Este valor es el mismo color rojo, pero en notación hexadecimal. En CSS puedes utilizar colores por su nombre en 
+                inglés o mediante esta notación.
+                Guarda el archivo y muéstralo de nuevo en el navegador. El color sigue siendo el mismo rojo. La notación hexadecimal es el método más habitual 
+                para indicar colores en la Web.
+                </p>
+
+            <h2>Los estilos de clase y el elemento span> </h2>
+
+            <p>Los selectores de etiqueta se utilizan con mucha frecuencia, pero solo se pueden aplicar a elementos HTML. 
+            Cuando lo que queremos es modificar el estilo de alguna cosa que no coincide exactamente con una etiqueta, por ejemplo cambiar el color de una 
+            única palabra dentro de un párrafo, el selector de etiqueta no es una buena opción (e incluso en algunas ocasiones resulta imposible de aplicar). 
+            En este caso podemos utilizar el selector de clase, que es una regla CSS que se puede aplicar a cualquier elemento dentro de una página. </p>
+            <p>Los selectores de clase tienen unas opciones de nomenclatura flexibles, pero es muy conveniente utilizar nombres que describan adecuadamente 
+                lo que hacen. Por ejemplo, podemos crear selectores de clase como .caption, .imageborder, o .redtext.</p>
+
+
+            <h2>Tres maneras de utilizar estilos </h2>
+
+            <p>En la práctica anterior los estilos estaban situados dentro de la sección de cabecera (head) de la página. Esta modalidad recibe el nombre de 
+            hoja de estilos interna. Además de hojas de estilo internas, también existen las hojas de estilos externas y los estilos aplicados 
+            directamente ("inline").
+            Una hoja de estilo externa es un documento independiente con la extensión .css. Cuando utilizamos un archivo externo, 
+            los estilos se definen en él y en las páginas HTML tenemos que insertar un enlace a dicho archivo. Mientras que las hojas de estilo internas 
+            solo se aplican a la página donde residen, las hojas externas se pueden aplicar a múltiples documentos HTML.
+                </p>
+            <p>Los estilos inline o directos son la tercera posibilidad pero se utilizan mucho menos que las otras dos. En este caso, las reglas 
+            se declaran dentro de las propias etiquetas HTML.</p>
+
+            <h2>Cuándo utilizar hojas de estilo internas y externas</h2>
+
+            <p>En las hojas de estilo internas, las reglas CSS quedan escritas directamente dentro del documento utilizando la etiqueta style. 
+            La hoja de estilos queda ubicada dentro de la sección head del documento. En el caso de las hojas internas, las reglas CSS solo se aplican 
+            al documento en donde residen. Por ejemplo, si tenemos un sitio web con 20 páginas y decidimos utilizar hojas de estilo internas, deberemos 
+            crear una hoja de estilos dentro de cada una de esas 20 páginas. Un cambio en cualquier regla exigiría modificar todas y cada una de las hojas de 
+            estilo internas en dichas páginas para mantener la consistencia.</p>
+
+            <h2>En qué consisten los estilos de cascada</h2>
+
+            <p>Hemos visto que hay tres sitios donde podemos indicar reglas CSS: dentro de la propia etiqueta (inline), internamente y en archivos externos asociados. 
+            Si surgiera algún conflicto en la definición de estilos entre las declaraciones inline, interna y/o externa, el estilo directo (inline) 
+            será el que prevalezca porque es el que más cerca se sitúa del código HTML.</p>
+
+            <h2>Uso de textos y tipos de letra en la web</h2>
+
+            <p>A la hora de diseñar para la web, podemos formatear el texto de una forma parecida a como se hace en las aplicaciones de procesamiento de textos y 
+            diseño publicitario de los equipos de escritorio, pero debemos tener en cuenta algunas diferencias importantes. Cuando especificamos el uso de una 
+            fuente (tipo de letra) concreta, esta fuente ha de estar instalada en el ordenador o el dispositivo del usuario donde se va a restituir la página. 
+            Si el ordenador o dispositivo no dispone de esa fuente, el navegador la sustituye por otra.</p>
+
+            <p> Ejemplos: Arial
+                Verdana,
+                Georgia,
+                Times New Roman,
+                Courier,
+                Trebuchet,
+                Lucida,
+                Tahoma y 
+                Impact</p>
+
+            <h2>Elección de font-family</h2>
+
+            <p>La escasez de opciones a la hora de utilizar distintas fuentes en la web ha causado frustración entre los diseñadores Web durante muchos años. 
+            Este problema va aliviándose a medida que ciertas empresas han ido creando soluciones para que las páginas puedan verse en un navegador con los 
+            tipos de letra especificados por los creadores.
+            El panorama de las fuentes está cambiando, sin embargo, con la aparición de las llamadas "web fonts" y, en concreto, con la funcionalidad 
+            @font-face de CSS. Ahora es posible añadir una gran variedad de tipos de letra y tener la certeza de que nuestras páginas se podrán ver tal y como 
+            pretendemos.</p>
+
+            <h2>Cambiar el tamaño del texto con CSS</h2>
+
+            <p>Cuando utilizamos CSS para formatear textos para la web, disponemos de algunas opciones para establecer su tamaño y su grosor. 
+            La propiedad CSS que controla el tamaño del texto se llama font-size.Podemos modificar el valor de la propiedad font-size de varias formas:
+                
+                <p>Tamaño absoluto: se trata de una serie de palabras clave que indican tamaños predefinidos de letra. 
+                    Los tamaños nominados escalan de acuerdo con las preferencias del usuario con respecto a la letra. Los valores posibles xx-small, 
+                    x-small, small, medium, large, x-large y xx-large.</p>
+                    <p>Longitud: Es un número seguido de un indicador del sistema de medida (cm, mm, in, pt, o pc) o bien un de unidades 
+                        relativas (em, ex, o px).</p>
+                        <p> Porcentaje: Un entero seguido del signo de porcentaje (%). El valor es un tanto por ciento del tamaño de letra del objeto padre.</p>
+                            <p>Tamaño relativo: una serie de palabras clave que se interpretan como relativas al tamaño de letra del objeto padre. 
+                                Los valores posibles son larger y smaller.</p>
+
+            <h2>Las medidas en pixels y puntos no son la mejor opción para el tamaño</h2>
+
+            <p>La declaración del tamaño de letra en puntos puede ser algo obvio si vienes del mundo de las artes gráficas, y si tienes experiencia con el diseño 
+            gráfico por ordenador, seguramente te manejarás muy bien usando los pixels como unidad de medida. La propiedad font-size en CSS nos permite utilizar 
+            ambas unidades.</p>
+
+            <h2>Uso de una combinación de porcentaje y medida "em"</h2>
+            <p>1 En el menú Archivo del editor de texto, selecciona Abrir y ve a la carpeta HTML5_02lessons. Localiza el archivo 02_sizing.html y pulsa Aceptar. En el menú Archivo, selecciona "Guardar como" y guárdalo con el nombre 02_sizing_work.html.
+
+        <p>Este archivo tiene cuatro bloques de texto: un título de nivel 1 (heading 1, h1), un heading 2 h2, y dos párrafos p. 
+        Este archivo utiliza una hoja de estilos interna por comodidad, y hemos declarado el tipo de letra Trebuchet para todo el cuerpo. 
+        Vamos a empezar por modificar algunas propiedades en el propio cuerpo para ver qué ocurre.</p>
+                
+        <p>2 Antes de cambiar nada, tenemos que comprobar cómo se ve la página en su estado inicial. Visualiza este archivo en el navegador. 
+        Todos los navegadores aplican un tamaño de letra por defecto si no hay estilos que aplicar. En la mayoría de casos, el valor utilizado para el 
+        cuerpo es de 16 pixels (en este caso los párrafos heredan el valor de la etiqueta body). Cierra el navegador y regresa al editor de textos.</p>
+
+        <p>3 Guarda el archivo en disco y abre la página en el navegador. Verás que todo el texto es ahora bastante más pequeño, y esto es debido a que el 
+        estilo del cuerpo define el tamaño general del texto para toda la página, y los demás elementos como párrafos y títulos, se restituyen en función de ese 
+        valor base.</p>
+
+        <p>De nuevo, guarda el archivo y abre la página en el navegador. Todo el texto es ahora algo más grande que el valor de 10 pixels que le indicamos en el paso 3. 
+        Como explicaba anteriormente, el valor "small" es una unidad de medida absoluta, llamada "palabra clave". Los navegadores web tienen tamaños 
+        predefinidos asignados a las palabras clave y, aunque algunos prefieren las palabras clave porque así se evitan tener que usar unidades 
+        (y los problemas que acarrean), en general no nos aportan el nivel de detalle que seguramente necesitaremos en muchas ocasiones.</p>
+
+        <p>Guarda el archivo y vuelve a mostrarlo en el navegador. Dependiendo de qué navegador utilices, probablemente no vas a ver ningún 
+        cambio en la página y eso se debe a que el valor em de 1 se vincula con un tamaño de letra del 100%, que es lo que hemos definido para el cuerpo.</p>
+
+
+        <br/><br/><hr/><br/><br/>
+        <h1 >Preguntas:</h1>
+        <h3>1.- ¿Que es un XML y para que sirve?</h3>
+
+        <p>XML es el acrónimo de Extensible Markup Language, es decir, es un lenguaje de marcado que define un conjunto de reglas para la codificación de documentos.</p>
+        <p>Es un conjunto de códigos que se pueden aplicar en el análisis de datos o la lectura de textos creados por computadoras o personas. 
+            El lenguaje XML proporciona una plataforma para definir elementos para crear un formato y generar un lenguaje personalizado.</p>
+
+        <h3>2.- ¿Que caracteristicas tiene un documento HTML? </h3>
+
+        <p>Cuenta con un sistema de etiquetas de hípertexto, almacena datos que sean ingresados y publicados dentro de una página, también cuenta con estilos aplicables
+            por medio de otro lenguaje de programación que es compatible con él. Nos permite indicar la estructura de nuestro documento mediante etiquetas. 
+            Este lenguaje nos ofrece una gran adaptabilidad, una estructuración lógica y es fácil de interpretar tanto por humanos como por máquinas.
+        </p>
+
+        <h3>3.- ¿Que es y para que sirve un archivo XHTML?</h3>
+        <p>XHTML (eXtensible HyperText Markup Language) es, básicamente, HTML expresado como XML válido. Es más estricto a nivel técnico, pero esto permite que 
+        posteriormente sea más fácil al hacer cambios o buscar errores entre otros.Tiene básicamente, las mismas funcionalidades, pero cumple las especificaciones, 
+        más estrictas, de XML. Su objetivo es avanzar en el proyecto del World Wide Web Consortium de lograr una web semántica, donde la información, y la forma de 
+        presentarla estén claramente separadas. </p>
+
+        <br/><br/><hr/><br/><br/>
+
+        <h1 >Conclusiones: </h1>
+        
+        <h3>AARÓN ENRIQUE CASTILLO ROJAS:</h3>
+
+        <p>En esta práctica se nos hace referencia a cómo utilizar hojas de estilos para css, también el papel que lleva el css en la programación ya que 
+        permite dar un estilo diferente a la página web, también los estilos en cascada que este dará algún otro formato para la página web.</p>
+
+        <h3>ROBERTO CARLOS CANIZALES JUAREZ:</h3>
+
+        <p>En esta ocasión vimos como implementar o definir un tipo de estilo en los títulos. También vimos los estilos de clase y el elemento span; 
+        aprendimos que los selectores de clase tienen unas opciones de nomenclatura flexibles, pero es muy conveniente utilizar nombres que describan 
+        adecuadamente lo que hacen. Vimos que hay 3 maneras de utilizar estilos, las cuales son las externas, las internas y los aplicados directamente; 
+        los cuales si sabes implementarlos correctamente puede resultar algo mejor.</p>
+
+        <h3>NAOMI ALEJANDRA CRUZ HERNANDEZ: </h3>
+
+        <p>En esta lección aprendimos a introducir etiquetas variadas e imagenes dentro del archivo HTML para el uso de imagenes y estilos de CSS
+            así trabajando archivos de CSS en una página aparte y dandole una mejor estructura al archivo. Al igual que un poco más de la web global 
+            en la que XHTML y los archivos XML trabajan.
+
+        </p>
+
+        <h3>MACARIO GARZA MARIN:</h3>
+
+        <p>En conclusión, con esta práctica pudimos distinguir entre la sintaxis que lleva HTML y también saber más sobre su instrucción más utilizada el DOCTYPE 
+        también la colocación de imágenes y márgenes con CSS de esta forma externa para que el programa sea menos pesado y sea más práctico de manejar que tener 
+        el CSS dentro del programa.</p>
+
+        <h3>ALFREDO GAEL DELGADO MUÑOZ:</h3>
+
+        <p>Pudimos comprender y trabajr un poco más con las herramientas de HTML que se nos fueron dadas en el curso al igual que conocer las variantes de XML y 
+            XHTML y de como estas contribuyen su parte en el campo del desarrollo de programación web, fue interesante ver las diferencias y similitudes que estos 
+            compartían entre sí y el como estaban enlazados. 
+        </p>
+
+
+        </body>
