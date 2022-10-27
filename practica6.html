@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Práctica 6 Programación Web</title>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" type="text/css" href="css/estilo01.css"/>
+        <style type="text/css">
+            canvas { background: #f0f0f0; }
+        </style>
+    </head>
+<body>
+    <canvas id="canvas" width="600" height="600" ></canvas>
+    <script>
+        var PIXEL_SIZE = 12
+        var canvas = document.getElementById('canvas');
+        var context = canvas.getContext('2d');
+
+        function drawPixel(x, y) {
+            context.fillRect(
+                x * PIXEL_SIZE,
+                y * PIXEL_SIZE,
+                PIXEL_SIZE,
+                PIXEL_SIZE
+            );
+        }
+
+        canvas.onmousedown = function(e) {
+            canvas.onmousemove = motion;
+            motion(e);
+        }
+        canvas.onmouseup = function(e) {
+            canvas.onmousemove = null;
+        }
+
+        function motion(e) {
+            drawPixel(
+                Math.floor((e.clientX - canvas.offsetLeft) / PIXEL_SIZE),
+                Math.floor((e.clientY - canvas.offsetTop) / PIXEL_SIZE),
+            );
+        }
+
+
+     
+
+
+
+    </script>
+    <h1>DIBUJOS HECHOS: </h1>
+    <img src="jing.png" width="1000px"> 
+    <br/><br/><hr/><br/><br/>
+
+<h1>Conclusiones personales: </h1>
+
+
+<br><h3>AARÓN ENRIQUE CASTILLO ROJAS:</h3> <p> En esta práctica se nos dió como objetivo hacer uso de canvas que se puede utilizar para hacer tipo animaciones 
+    con diferentes comando en HTML es interesante el conocer este tipo de elementos por sus múltiples usos a la hora de hacer alguna página web o programa</p>
+
+<h3>ROBERTO CARLOS CANIZALES JUAREZ: </h3><p>De canvas aprendí que es como un lienso, un elemento que se puede utilizar en HTML; que permite 
+    generar graficos y animaciones de manera dinamica por medio de scripts</p>
+
+<h3>NAOMI ALEJANDRA CRUZ HERNANDEZ: </h3><p> En conclusión se me hizo muy interesante el elemento de html llamado canvas, el cual permite la generación de 
+    gráficos por medio de scripting.
+    Me interesó mucho que permite la reenderizacion  interpretada dinámica de gráficos 2D y mapas de bits, asi como animaciones con estos gráficos.</p>
+
+<h3>MACARIO GARZA MARIN: </h3><p> El uso de la etiqueta canvas es muy útil ya que nos permite insertar de una manera más fácil lo que son los gráficos y 
+    mapas para poder hacer nuestra página web más dinámica para el usuario, también se puede utilizar para darle un mejor estilo y apariencia a nuestra 
+    página web</p>
+
+<h3>ALFREDO GAEL DELGADO MUÑOZ: </h3><p> Con la etiqueta canvas al usuario se le permite interactuar y desarrollar diversas aplicaciones 
+    con la intención de poder dibujar sobre el lienzo en línea que se le proporcione y es por eso que es una etiqueta importante y a tener
+    en cuenta, pues puede servir para un editor.
+</p>
+</body>
